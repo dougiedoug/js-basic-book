@@ -14,5 +14,25 @@
 </head>
 <body>
 	<h2>3의 배수 찾기</h2>
+	<script>
+		var three_count = 0;
+		var count=1;
+		var line_count=0;
+		var input_limit = prompt("몇까지의 3의 배수를 볼까요?");
+		while (count<=input_limit){
+			if(count%3===0){
+				document.write(count+" ");
+				line_count+=1;
+				three_count+=1;
+			}
+			if(line_count>=5){
+				document.write("<br>");
+				line_count=0;
+			}
+			count+=1;
+		}
+		document.write("<h1>"+three_count+"개입니다. </h1>")
+
+	</script>
 </body>
 </html>

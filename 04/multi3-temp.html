@@ -12,9 +12,15 @@
 	
 	<script>
 		var userNumber = prompt("숫자를 입력하세요.");
+		var displayArea = document.querySelector("#result");
 
 		if(userNumber != null) {    // '취소' 버튼을 클릭하지 않았다면
 			// 3의 배수인지 확인하는 소스
+			if(userNumber%3===0){
+				displayArea.innerHTML=userNumber + "은 3의 배수입니다.";
+			}else{
+				displayArea.innerHTML=userNumber + "은 3의 배수가 아닙니다.";
+			}
 		}
 		else { 		// '취소' 버튼을 클릭했다면
 			alert("입력이 취소되었습니다.");
